@@ -9,3 +9,13 @@ $(document).ready(function(){
     })
 });
 
+var getBreweries = function(){
+    var apiUrl = `https://api.openbrewerydb.org/breweries?by_state=new_york`;
+    fetch(apiUrl)
+    .then(function (response){
+        console.log(response.json());
+    })  
+
+}
+
+getBreweries();
