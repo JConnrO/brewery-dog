@@ -5,37 +5,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking to materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Brewery Dog</title>
 </head>
 
 <body>
+    <!-- header section -->
     <header>
-        <h1>
-            <a href="index.html">Brewery Dog </a>
-        </h1>
+        <!-- navigation -->
         <nav>
-            <ul>
-                <li>
-                    <a href="#About">About</a>
-                </li>
-                <li>
-                    <a href="#Contact-us">Contact Us</a>
-                </li>
-            </ul>
+            <div class="nav-wrapper">
+                <a href="index.html">Brewery Dog </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a href="#About-us">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#Contact-us">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
+<<<<<<< HEAD
     <form id="form">
         <input type="text" id="brewsearch" name="brewsearch" autofocus="true" />
         <button type="button" id="submit">Submit</button>
     </form>
     <img src="./assets/images/brewery.png" alt="brewery" />
+=======
+    <!--added the form input -->
+    <div>
+        <form id="form">
+            <input placeholder="Search breweries" id="brew-search" type="text" class="validate">
+            <button type="button" id="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- added the image of the brewery -->
+    <img src="./assets/images/brewery.png" alt="brewery" />
+
+    <!-- About section -->
+    <section>
+        <div>
+            <h2>About Us</h2>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section>
+        <div>
+            <h2>Contact Us</h2>
+        </div>
+    </section>
+
+    <!-- footer section -->
+>>>>>>> 50cc5b3f585b6b4bf1cf0bc7d36ff1ab38fc1977
     <footer>
         <h2> Made with Love & Care by Brewery Dog </h2>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/script.js"></script>
 
 </body>
