@@ -18,6 +18,11 @@ API
 ---
 
 ## Website
+#user Story
+Given I am a website to find closet breweries
+When User enters city/zip code in input bar
+When users click,Users receives list of breweries
+Locations are generated closet to users location
 
 
 ---
