@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
+.title{
+    font-size: 50px;
+    font-weight: bolder;
+    color: black;
+    font-style: oblique;
+    text-shadow: 0 2px blue;
+}
+
+.nav-wrapper{
+background-color: rgb(129, 95, 21);
+}
+
+.form-input{
+    border: 1px solid black;
+    display:block;
+    padding: 7px 15px;
+    width:  100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.submit{
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    background-color: rgb(245, 212, 142) ;
+}
