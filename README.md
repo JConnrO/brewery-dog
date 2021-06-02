@@ -12,6 +12,16 @@ So that I can plan a brewery visit accordingly based in the input
 
 ---
 
+## Acceptance Criteria
+GIVEN a brewery locator with the form inputs </br>
+WHEN I enter a city </br>
+THEN I am presented with breweries near my entered input </br>
+WHEN I click on one of the name of the brewery list </br>
+THEN I am presented with the google maps that displays the direction and address.  
+
+---
+
+
 ## API's
 1. [BreweryAPI](https://www.openbrewerydb.org/documentation)
 2. [GoogleMapsAPI](https://developers.google.com/maps/documentation/embed/map-generator#create-project) 
@@ -30,10 +40,28 @@ So that I can plan a brewery visit accordingly based in the input
 ---
 
 ## ScreenShot
+![Screenshot 1](./assets/images/Screenshot(1).png)
+![Screenshot 2](./assets/images/Screenshot(2).png)
+![Screenshot 3](./assets/images/Screenshot(3).png)
+![Screenshot 4](./assets/images/Screenshot(4).png)
+---
 
 
 ## Website
-[Brewery Dog]()
+[Brewery Dog](https://jconnro.github.io/crispy-octo-parakeet/)
+
+---
+
+## Issues 
+1. full mobile reponsive 
+2. update local storage
+3. submit when enter is hit
+4. cursor
+5. add href to the breweries list
+6. google map sizing/css
+7. About us and contact us links not working
+
+---
 
 
 ## Contribution
