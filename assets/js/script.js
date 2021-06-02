@@ -10,8 +10,6 @@ $(document).ready(function () {
         localStorage.getItem(text);
     });
 });
-
-
 function getBreweryByCity(city) {
     var breweryApiURL = `https://api.openbrewerydb.org/breweries?by_city=${city}`;
     fetch(breweryApiURL).then(response => {
@@ -59,6 +57,7 @@ function renderBreweryDirections(breweryName){
     iframeEl.setAttribute("src", iframeSrc);
     mapHTML.append(iframeEl);
    // <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/search?q=left bank&key=AIzaSyD_XHESF0-cQkfMSd2HgoAIeWN6PPRHh0Q"></iframe>
-}
+};
+
 
   
