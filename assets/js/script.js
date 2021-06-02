@@ -8,9 +8,8 @@ $(document).ready(function () {
         //search history for the places in local storage
         localStorage.setItem("text", text);
         localStorage.getItem(text);
-    })
+    });
 });
-
 function getBreweryByCity(city) {
     var breweryApiURL = `https://api.openbrewerydb.org/breweries?by_city=${city}`;
     fetch(breweryApiURL).then(response => {
@@ -25,13 +24,40 @@ function displayBreweries(breweries) {
     console.log(breweries.length);
     $("#brewery-list").empty();
     for (var i = 0; i < breweries.length; i++) {
-        var brewery = breweries[i]
+        var brewery = breweries[i];
         console.log(brewery);
-        var brewEl = document.createElement("a")
-        brewEl.innerText = brewery.name
-        brewEl.setAttribute("href", brewery.website_url)
+        var brewEl = document.createElement("p");
+        brewEl.innerText = brewery.name;
+        brewEl.classList = "brewery-name";
+        brewEl.setAttribute("id","brewery-name");
+
+
+        //brewEl.setAttribute("iframeSrc",)
+        //Onclick: Return BreweryName 
         $("#brewery-list").append(brewEl);
+        
     }
+    $( ".brewery-name" ).click(function() {
+        $("#map").empty();
+        var breweryName = $(this).text();
+        console.log(breweryName);
+        renderBreweryDirections(breweryName);
+    });
+}
+function renderBreweryDirections(breweryName){
+    var mapsKey = "AIzaSyD_XHESF0-cQkfMSd2HgoAIeWN6PPRHh0Q";
+    var mapHTML = document.querySelector("#map");
+    var iframeSrc = `https://www.google.com/maps/embed/v1/search?q=${breweryName}&key=${mapsKey}`;
+    var iframeEl = document.createElement("iframe");
+    iframeEl.setAttribute("width","600");
+    iframeEl.setAttribute("height","450");
+    iframeEl.setAttribute("style","border:0");
+    iframeEl.setAttribute("loading","lazy");
+    iframeEl.setAttribute("allowfullscreen","");
+    iframeEl.setAttribute("src", iframeSrc);
+    mapHTML.append(iframeEl);
+   // <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/search?q=left bank&key=AIzaSyD_XHESF0-cQkfMSd2HgoAIeWN6PPRHh0Q"></iframe>
 };
 
 
+  

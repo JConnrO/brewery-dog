@@ -31,12 +31,10 @@ So that I can plan a brewery visit accordingly based in the input
 
 ## ScreenShot
 
----
 
 ## Website
 [Brewery Dog]()
 
----
 
 ## Contribution
 Made with love and care by Connor, Sonika, Rohan and Alan. 

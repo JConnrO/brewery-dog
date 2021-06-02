@@ -53,3 +53,9 @@ background-color: rgb(199, 150, 44);
     display: flex;
 } */
 
+#map {
+    height: 100%;
+  }
+  
+  /* Optional: Makes the sample page fill the window. */
+
