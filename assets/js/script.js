@@ -11,16 +11,6 @@ $(document).ready(function () {
     })
 });
 
-// var getBreweries = function(){
-//     var apiUrl = `https://api.openbrewerydb.org/breweries`;
-//     fetch(apiUrl)
-//     .then(function (response){
-//         console.log(response.json());
-//         getBreweryByCity();
-//     })  
-
-// }
-
 function getBreweryByCity(city) {
     var breweryApiURL = `https://api.openbrewerydb.org/breweries?by_city=${city}`;
     fetch(breweryApiURL).then(response => {
@@ -42,6 +32,6 @@ function displayBreweries(breweries) {
         brewEl.setAttribute("href", brewery.website_url)
         $("#brewery-list").append(brewEl);
     }
-}
+};
 
 

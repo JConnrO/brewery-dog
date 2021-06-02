@@ -1,49 +1,42 @@
-# crispy-octo-parakeet
-Project 1
-Brewery Locator
----
+# Brewery Locater
 
 ## Description
+This website is about a brewery locater application. When the user searches the city near his/her location, the user will be able to find the list of the breweries that are located in the city. When clicked on one of the name of the brewery, the page will lead the user to the google maps and gives the user direction to the location. 
+
 ---
 
-Enter your zipcode or city name and find nearest N breweries nearest to you.
-Show on Map.
+## User Story 
+As a traveler and beer lover </br>
+I want to see the brewery location of the city near me </br>
+So that I can plan a brewery visit accordingly based in the input
 
-API
-1. BreweryAPI https://www.openbrewerydb.org/documentation
-2. Geolocation https://developers.google.com/maps/
+---
+
+## API's
+1. [BreweryAPI](https://www.openbrewerydb.org/documentation)
+2. [GoogleMapsAPI](https://developers.google.com/maps/documentation/embed/map-generator#create-project) 
+
+---
 
 ## Built With
+1. HTML
+2. Materialize CSS
+3. APIUrl
+4. JavaScript
+5. jQuery
+6. local Storage
+7. CSS Variables
+
+---
+
+## ScreenShot
 
 ---
 
 ## Website
-#user Story
-Given I am a website to find closet breweries
-When User enters city/zip code in input bar
-When users click,Users receives list of breweries
-Locations are generated closet to users location
-
+[Brewery Dog]()
 
 ---
-## Ideas 
 
 ## Contribution
 Made with love and care by Connor, Sonika, Rohan and Alan. 
-Due: June 6th
-Presentation: 2nd
-
-1. Front End - Bulma
-    A. Render Brewery's Near You
-    B. Nav Bar 
-    C. Color Scheme - Beer / Autumn Color
-    D. Location Input Bar
-    E. Display Google Map?
-3. 2 API's / Backend
-4. Wireframe
-5. Powerpoint
-6. MVP 
-    A. Location Input Bar
-    B. Render Brewery's Near You
-    C. Display Google Map
-    
