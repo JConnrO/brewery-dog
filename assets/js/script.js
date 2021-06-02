@@ -22,10 +22,15 @@ function getBreweryByCity(city) {
 
 function displayBreweries(breweries) {
     console.log(breweries.length);
+    
     $("#brewery-list").empty();
+    var titleEl = document.createElement("h4");
+        titleEl.textContent = "Click a Brewery:";
+        $("#brewery-list").append(titleEl);
     for (var i = 0; i < breweries.length; i++) {
         var brewery = breweries[i];
         console.log(brewery);
+        
         var brewEl = document.createElement("p");
         brewEl.innerText = brewery.name;
         brewEl.classList = "brewery-name";
@@ -49,6 +54,7 @@ function renderBreweryDirections(breweryName){
     var mapHTML = document.querySelector("#map");
     var iframeSrc = `https://www.google.com/maps/embed/v1/search?q=${breweryName}&key=${mapsKey}`;
     var iframeEl = document.createElement("iframe");
+       // <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/search?q=left bank&key=AIzaSyD_XHESF0-cQkfMSd2HgoAIeWN6PPRHh0Q"></iframe>
     iframeEl.setAttribute("width","600");
     iframeEl.setAttribute("height","450");
     iframeEl.setAttribute("style","border:0");
@@ -56,7 +62,6 @@ function renderBreweryDirections(breweryName){
     iframeEl.setAttribute("allowfullscreen","");
     iframeEl.setAttribute("src", iframeSrc);
     mapHTML.append(iframeEl);
-   // <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/search?q=left bank&key=AIzaSyD_XHESF0-cQkfMSd2HgoAIeWN6PPRHh0Q"></iframe>
 };
 
 

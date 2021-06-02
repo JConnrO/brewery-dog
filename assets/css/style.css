@@ -35,11 +35,13 @@ background-color: rgb(199, 150, 44);
 
 .form-input{
     border: 1px solid black;
-    display:block;
+    display: block;
     padding: 7px 15px;
     width:  100%;
     border-radius: 10px;
     margin-bottom: 15px;
+    margin-top: 15px;
+
 }
 
 .submit{
@@ -47,6 +49,8 @@ background-color: rgb(199, 150, 44);
     border-radius: 5px;
     font-size: 1.6rem;
     background-color: rgb(245, 212, 142) ;
+    margin-bottom: 3px;
+
 }
 
 /* .flex-row {
