@@ -48,7 +48,7 @@ THEN I am presented with the google maps that displays the direction and address
 
 
 ## Website
-[Brewery Dog](https://jconnro.github.io/crispy-octo-parakeet/)
+[Brewery Dog](https://jconnro.github.io/brewery-dog/)
 
 ---
 
@@ -65,4 +65,4 @@ THEN I am presented with the google maps that displays the direction and address
 
 
 ## Contribution
-Made with love and care by Connor, Sonika, Rohan and Alan. 
+Made with love and care by Connor, Sonika, Alan and Rohan. 
