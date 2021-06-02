@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 15px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+img{
+    width: 100%;
+}
+
+.title{
+    font-size: 50px;
+    font-weight: bolder;
+    color: black;
+    font-style: oblique;
+    text-shadow: 0 2px blue;
+}
+
+.size a {
+    font-size: 20px;
+}
+
+.nav-wrapper{
+background-color: rgb(199, 150, 44);
+}
+
+.form-input{
+    border: 1px solid black;
+    display:block;
+    padding: 7px 15px;
+    width:  100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.submit{
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    background-color: rgb(245, 212, 142) ;
+}
+
+/* .flex-row {
+    display: flex;
+} */
+
+#map {
+    height: 100%;
+  }
+  
+  /* Optional: Makes the sample page fill the window. */
+
