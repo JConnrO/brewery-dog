@@ -10,8 +10,6 @@ $(document).ready(function () {
         localStorage.getItem(text);
     });
 });
-
-
 function getBreweryByCity(city) {
     var breweryApiURL = `https://api.openbrewerydb.org/breweries?by_city=${city}`;
     fetch(breweryApiURL).then(response => {
@@ -64,6 +62,7 @@ function renderBreweryDirections(breweryName){
     iframeEl.setAttribute("allowfullscreen","");
     iframeEl.setAttribute("src", iframeSrc);
     mapHTML.append(iframeEl);
-}
+};
+
 
   
