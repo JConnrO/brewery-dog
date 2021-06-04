@@ -55,8 +55,8 @@ function renderBreweryDirections(breweryName){
     var iframeSrc = `https://www.google.com/maps/embed/v1/search?q=${breweryName}&key=${mapsKey}`;
     var iframeEl = document.createElement("iframe");
        // <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/search?q=left bank&key=AIzaSyD_XHESF0-cQkfMSd2HgoAIeWN6PPRHh0Q"></iframe>
-    iframeEl.setAttribute("width","600");
-    iframeEl.setAttribute("height","450");
+    iframeEl.setAttribute("width","100%");
+    iframeEl.setAttribute("height","400");
     iframeEl.setAttribute("style","border:0");
     iframeEl.setAttribute("loading","lazy");
     iframeEl.setAttribute("allowfullscreen","");
