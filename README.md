@@ -60,6 +60,9 @@ THEN I am presented with the google maps that displays the direction and address
 5. add href to the breweries list
 6. google map sizing/css
 7. About us and contact us links not working
+8. font size for the list
+9. share button to share with friends on social media or msg
+10. cleanup the list a little bit 
 
 ---
 
