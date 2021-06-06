@@ -25,7 +25,7 @@ function displayBreweries(breweries) {
     var titleEl = document.createElement("h4");
     titleEl.textContent = "Click a Brewery:";
     $("#brewery-list").append(titleEl);
-    for (var i = 0; i < breweries.length; i++) {
+    for (var i = 0; i < 10; i++) {
         var brewery = breweries[i];
         console.log(brewery);
 
