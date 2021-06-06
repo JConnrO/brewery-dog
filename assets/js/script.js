@@ -4,13 +4,10 @@ var mapHistory = [];
 $(document).ready(function () {
     $("#submit").on("click", function () {
         var text = $("#brew-search").val();
-        console.log(text);
         getBreweryByCity(text);
-        //search history for the places in local storage
-        localStorage.setItem("text", text);
-        localStorage.getItem(text);
     });
 });
+
 function getBreweryByCity(city) {
     var breweryApiURL = `https://api.openbrewerydb.org/breweries?by_city=${city}`;
     fetch(breweryApiURL).then(response => {
@@ -64,15 +61,22 @@ function displayBreweries(breweries) {
         return JSON.parse(localStorage.getItem("mapHistory"));
     }
 
+    function renderMapHistory() {
+        mapHistory = loadMapHistory();
+        console.log(mapHistory);
+    }
+
     //on click, store the clicked brewery name
     //localsetitem. localgetitem .val on click
     $( ".brewery-name" ).click(function() {
         $("#map").empty();
         var breweryName = $(this).text();
         saveMapHistory(breweryName);
+        renderMapHistory();
         renderBreweryDirections(breweryName);
     });
 }
+
 function renderBreweryDirections(breweryName) {
     var mapsKey = "AIzaSyD_XHESF0-cQkfMSd2HgoAIeWN6PPRHh0Q";
     var mapHTML = document.querySelector("#map");
@@ -88,4 +92,7 @@ function renderBreweryDirections(breweryName) {
     mapHTML.append(iframeEl);
 };
 
+mapHistory = loadMapHistory();
+// function renderApp() {
 
+// }
