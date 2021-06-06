@@ -1,5 +1,6 @@
 var brewList = document.querySelector("#brew-location")
 var button = document.querySelector("#submit");
+var mapHistory = [];
 $(document).ready(function () {
     $("#submit").on("click", function () {
         var text = $("#brew-search").val();
@@ -47,8 +48,20 @@ function displayBreweries(breweries) {
         $("#brewery-list").append(brewEl);
     }
 
-    function saveBrewery () {
-        localStorage.setItem(breweryName);
+
+    var saveMapHistory = function (breweryName) {
+        mapHistory.push(breweryName);
+        localStorage.setItem("mapHistory", JSON.stringify(mapHistory));
+    }
+
+    function loadMapHistory() {
+        //If not local storage create local storage
+        if (localStorage.getItem("mapHistory") === null) {
+            //Set up Array
+            localStorage.setItem("mapHistory", mapHistory);
+            saveMapHistory();
+        }
+        return JSON.parse(localStorage.getItem("mapHistory"));
     }
 
     //on click, store the clicked brewery name
@@ -56,7 +69,7 @@ function displayBreweries(breweries) {
     $( ".brewery-name" ).click(function() {
         $("#map").empty();
         var breweryName = $(this).text();
-        console.log(breweryName);
+        saveMapHistory(breweryName);
         renderBreweryDirections(breweryName);
     });
 }
