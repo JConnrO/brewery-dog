@@ -25,7 +25,11 @@ function displayBreweries(breweries) {
     var titleEl = document.createElement("h4");
     titleEl.textContent = "Click a Brewery:";
     $("#brewery-list").append(titleEl);
-    for (var i = 0; i < breweries.length; i++) {
+    var breweryListLength = breweries.length;
+    if (breweryListLength > 10) {
+         breweryListLength = 10;
+    } 
+    for (var i = 0; i < breweryListLength; i++) {
         var brewery = breweries[i];
         console.log(brewery);
 
@@ -63,6 +67,30 @@ function displayBreweries(breweries) {
     function renderMapHistory() {
         mapHistory = loadMapHistory();
         console.log(mapHistory);
+
+        $("#brewery-history").empty();
+        var titleEl = document.createElement("h4");
+        titleEl.textContent = "Search History:";
+        $("#brewery-history").append(titleEl);
+        for (var i = 0; i < 10; i++) {
+            var brewery = breweries[i];
+            console.log(brewery);
+    
+            // var brewEl = document.createElement("p");
+            // brewEl.innerText = brewery.name;
+            // brewEl.classList = "brewery-name";
+            // brewEl.setAttribute("id", "brewery-name");
+    
+            // //function to make the font-size bigger of the brewery lists
+            // $("#brewery-list").css("font-size", "20px");
+    
+            // //function to add cursor when clicked on list
+            // $("#brewery-list").css("cursor", "pointer");
+    
+            // //brewEl.setAttribute("iframeSrc",)
+            // //Onclick: Return BreweryName 
+            // $("#brewery-list").append(brewEl);
+        }
     }
 
     //on click, store the clicked brewery name
