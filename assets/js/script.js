@@ -46,8 +46,7 @@ function displayBreweries(breweries) {
     }
 
 
-    var saveMapHistory = function (breweryName) {
-        mapHistory.push(breweryName);
+    var saveMapHistory = function () {
         localStorage.setItem("mapHistory", JSON.stringify(mapHistory));
     }
 
@@ -71,6 +70,8 @@ function displayBreweries(breweries) {
     $( ".brewery-name" ).click(function() {
         $("#map").empty();
         var breweryName = $(this).text();
+        mapHistory = loadMapHistory();
+        mapHistory.push(breweryName);
         saveMapHistory(breweryName);
         renderMapHistory();
         renderBreweryDirections(breweryName);
@@ -92,7 +93,6 @@ function renderBreweryDirections(breweryName) {
     mapHTML.append(iframeEl);
 };
 
-mapHistory = loadMapHistory();
 // function renderApp() {
 
 // }
