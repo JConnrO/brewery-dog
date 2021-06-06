@@ -81,5 +81,13 @@ h2 {
     height: 100%;
   }
   
-  /* Optional: Makes the sample page fill the window. */
+#brewery-history {
+    font-size: 16px;
+    cursor: pointer;
 
+}
+  
+#brewery-list {
+    font-size: 16px;
+    cursor: pointer;
+}
