@@ -47,7 +47,13 @@ function displayBreweries(breweries) {
         $("#brewery-list").append(brewEl);
     }
 
-    $(".brewery-name").click(function () {
+    function saveBrewery () {
+        localStorage.setItem(breweryName);
+    }
+
+    //on click, store the clicked brewery name
+    //localsetitem. localgetitem .val on click
+    $( ".brewery-name" ).click(function() {
         $("#map").empty();
         var breweryName = $(this).text();
         console.log(breweryName);
