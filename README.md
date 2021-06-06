@@ -56,13 +56,14 @@ THEN I am presented with the google maps that displays the direction and address
 1. full mobile reponsive 
 2. update local storage
 3. submit when enter is hit
-4. cursor
+4. cursor -DONE
 5. add href to the breweries list
 6. google map sizing/css
-7. About us and contact us links not working
-8. font size for the list
+7. About us and contact us links not working - DONE
+8. font size for the list - DONE
 9. share button to share with friends on social media or msg
 10. cleanup the list a little bit 
+11. update the sections - DONE
 
 ---
 
