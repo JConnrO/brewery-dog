@@ -1,15 +1,13 @@
 var brewList = document.querySelector("#brew-location")
 var button = document.querySelector("#submit");
+var mapHistory = [];
 $(document).ready(function () {
     $("#submit").on("click", function () {
         var text = $("#brew-search").val();
-        console.log(text);
         getBreweryByCity(text);
-        //search history for the places in local storage
-        localStorage.setItem("text", text);
-        localStorage.getItem(text);
     });
 });
+
 function getBreweryByCity(city) {
     var breweryApiURL = `https://api.openbrewerydb.org/breweries?by_city=${city}`;
     fetch(breweryApiURL).then(response => {
@@ -27,7 +25,11 @@ function displayBreweries(breweries) {
     var titleEl = document.createElement("h4");
     titleEl.textContent = "Click a Brewery:";
     $("#brewery-list").append(titleEl);
-    for (var i = 0; i < breweries.length; i++) {
+    var breweryListLength = breweries.length;
+    if (breweryListLength > 10) {
+         breweryListLength = 10;
+    } 
+    for (var i = 0; i < breweryListLength; i++) {
         var brewery = breweries[i];
         console.log(brewery);
 
@@ -47,13 +49,63 @@ function displayBreweries(breweries) {
         $("#brewery-list").append(brewEl);
     }
 
-    $(".brewery-name").click(function () {
+
+    var saveMapHistory = function () {
+        localStorage.setItem("mapHistory", JSON.stringify(mapHistory));
+    }
+
+    function loadMapHistory() {
+        //If not local storage create local storage
+        if (localStorage.getItem("mapHistory") === null) {
+            //Set up Array
+            localStorage.setItem("mapHistory", mapHistory);
+            saveMapHistory();
+        }
+        return JSON.parse(localStorage.getItem("mapHistory"));
+    }
+
+    function renderMapHistory() {
+        mapHistory = loadMapHistory();
+        console.log(mapHistory);
+
+        $("#brewery-history").empty();
+        var titleEl = document.createElement("h4");
+        titleEl.textContent = "Search History:";
+        $("#brewery-history").append(titleEl);
+        for (var i = 0; i < 10; i++) {
+            var brewery = breweries[i];
+            console.log(brewery);
+    
+            // var brewEl = document.createElement("p");
+            // brewEl.innerText = brewery.name;
+            // brewEl.classList = "brewery-name";
+            // brewEl.setAttribute("id", "brewery-name");
+    
+            // //function to make the font-size bigger of the brewery lists
+            // $("#brewery-list").css("font-size", "20px");
+    
+            // //function to add cursor when clicked on list
+            // $("#brewery-list").css("cursor", "pointer");
+    
+            // //brewEl.setAttribute("iframeSrc",)
+            // //Onclick: Return BreweryName 
+            // $("#brewery-list").append(brewEl);
+        }
+    }
+
+    //on click, store the clicked brewery name
+    //localsetitem. localgetitem .val on click
+    $( ".brewery-name" ).click(function() {
         $("#map").empty();
         var breweryName = $(this).text();
-        console.log(breweryName);
+        mapHistory = loadMapHistory();
+        mapHistory.push(breweryName);
+        saveMapHistory(breweryName);
+        renderMapHistory();
         renderBreweryDirections(breweryName);
     });
 }
+
 function renderBreweryDirections(breweryName) {
     var mapsKey = "AIzaSyD_XHESF0-cQkfMSd2HgoAIeWN6PPRHh0Q";
     var mapHTML = document.querySelector("#map");
@@ -69,4 +121,6 @@ function renderBreweryDirections(breweryName) {
     mapHTML.append(iframeEl);
 };
 
+// function renderApp() {
 
+// }
