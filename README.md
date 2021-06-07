@@ -17,7 +17,11 @@ GIVEN a brewery locator with the form inputs </br>
 WHEN I enter a city </br>
 THEN I am presented with breweries near my entered input </br>
 WHEN I click on one of the name of the brewery list </br>
-THEN I am presented with the google maps that displays the direction and address.  
+THEN I am presented with the google maps that displays the direction and address. </br>
+WHEN I click on one of the brewery list </br>
+THEN I am presented with search history of the breweries that I clicked </br>
+WHEN I click on the search history of the breweries list </br>
+THEN I can go back to the brewery that I click on previously and I will be presented with google maps with directions and address. 
 
 ---
 
@@ -44,26 +48,12 @@ THEN I am presented with the google maps that displays the direction and address
 ![Screenshot 2](./assets/images/Screenshot(2).png)
 ![Screenshot 3](./assets/images/Screenshot(3).png)
 ![Screenshot 4](./assets/images/Screenshot(4).png)
+![Screenshot 5](./assets/images/Screenshot(5).png)
 ---
 
 
 ## Website
 [Brewery Dog](https://jconnro.github.io/brewery-dog/)
-
----
-
-## Issues 
-1. full mobile reponsive 
-2. update local storage
-3. submit when enter is hit
-4. cursor -DONE
-5. add href to the breweries list
-6. google map sizing/css
-7. About us and contact us links not working - DONE
-8. font size for the list - DONE
-9. share button to share with friends on social media or msg
-10. cleanup the list a little bit 
-11. update the sections - DONE
 
 ---
 
